@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>szovo</title>
+    <meta name="keywords" content="szovo,szovo.com">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="header">
+        <svg id="gradient-rotate" preserveAspectRatio="none" viewBox="0 0 500 500">
+            <defs>
+              <linearGradient x1="0%" y1="0%" y2="100%" id="a">
+                <stop id="color-stop-1" stop-color="#22C8F6" offset="0%"></stop>
+                <stop id="color-stop-2" stop-color="#20C498" offset="65%"></stop>
+                <stop id="color-stop-3" stop-color="#189932" offset="100%"></stop>
+              </linearGradient>
+            </defs>
+            <path fill="url(#a)" d="M0 0h500v500H0z"></path>
+        </svg>
+    </header>
+    <div class="container">
+        <div class="whalecss" id="whale"></div>
+        <section class="section">
+            <a name="product"></a>
+            <h3 class="mk-sub-title">
+                 有趣的灵魂
+            </h3>
+        </section>
+        </div>
+        <footer class="footer">
+            <p>Copyright (c) 2020.&nbsp;&nbsp;&nbsp;&nbsp;Design by
+                <a href="https://www.szovo.com" rel="nofollow">Web 导航</a>.</p>
+            <p>ICP证：<a href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备14041086号-1</a></p>
+        </footer>
+        <script src="./trianglify.min.js"></script>
+        <script>
+            // set up the base pattern
+            var pattern = Trianglify({
+                height: window.innerHeight,
+                width: window.innerWidth,
+                x_colors: ['rgba(255, 255, 255, 0.1)', 'rgba(255, 255, 255, 1)'],
+                stroke_width: 0,
+                cell_size: Math.ceil(window.innerWidth / 8)
+            })
+            var svg = pattern.svg()
+            svg.id = 'trianglify-overlay'
+            document.body.appendChild(svg)
+        </script>
+
+</body>
+
+</html>
